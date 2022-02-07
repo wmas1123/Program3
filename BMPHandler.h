@@ -3,7 +3,7 @@
 *
 * Completion time: 2 hours
 *
-* @author (your name), Ruben Acuna
+* @author William Mastronardi, Ruben Acuna
 * @version 1.0
 */
 
@@ -11,11 +11,25 @@
 #include "Image.h"
 
 struct BMP_Header {
-    //TODO: Finish struct
+    char signature[2];
+    int size;
+    short reserved1;
+    short reserved2;
+    int offset_pixel_array;
 };
 
 struct DIB_Header {
-    //TODO: Finish struct
+    int size;
+    int width;
+    int height;
+    short planes;
+    short bits_per_pixel;
+    int compression;
+    int image_size;
+    int x_pixels_per_meter;
+    int y_pixels_per_meter;
+    int color_palette_size;
+    int important_color_count;
 };
 
 /**

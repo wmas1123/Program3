@@ -3,4 +3,4 @@ project(Program3 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Program3 main.c)
+add_executable(Program3 MastronardiImageProcessor.c Image.c BMPHandler.c)

@@ -26,7 +26,7 @@ void main() {
 	struct BMP_Header BMP;
 	struct DIB_Header DIB;
 
-	FILE* file_input = fopen("ttt.bmp", "rb");
+	FILE* file_input = fopen("/home/wmas/CLionProjects/Program3/ttt.bmp", "rb");
 	readBMPHeader(file_input, &BMP);
 	readDIBHeader(file_input, &DIB);
 
@@ -38,9 +38,9 @@ void main() {
 	fclose(file_input);
 
 	Image* img = image_create(pixels, 152, 152);
-	image_apply_colorshift(img, 0, 0, 40);
+	image_apply_bw(img);
 
-	FILE* file_output = fopen("ttt_usagesample.bmp", "wb");
+	FILE* file_output = fopen("/home/wmas/CLionProjects/Program3/ttt_usagesample.bmp", "wb");
 	writeBMPHeader(file_output, &BMP);
 	writeDIBHeader(file_output, &DIB);
 	writePixelsBMP(file_output, image_get_pixels(img), image_get_width(img), image_get_width(img));

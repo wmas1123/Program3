@@ -3,7 +3,7 @@
 *
 * Completion time: 1.5 hours
 *
-* @author (your name), Ruben Acuna
+* @author William Mastronaridi, Ruben Acuna
 * @version 9/9/2021
 */
 
@@ -26,14 +26,16 @@ struct Image {
 };
 
 struct Pixel{
-	//TODO: Finish struct
+	char red;
+    char blue;
+    char green;
 };
 
 ////////////////////////////////////////////////////////////////////////////////
 //Function Declarations
 
 /* Creates a new image and returns it.
-* 
+*
  * @param  pArr: Pixel array of this image.
  * @param  width: Width of this image.
  * @param  height: Height of this image.
@@ -43,7 +45,7 @@ Image* image_create(struct Pixel** pArr, int width, int height);
 
 
 /* Destroys an image. Does not deallocate internal pixel array.
-* 
+*
  * @param  img: the image to destroy.
 */
 void image_destroy(Image** img);
